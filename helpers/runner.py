@@ -1,4 +1,4 @@
-from helpers.config import Config
+from config.config import Config
 from helpers.counter import Counter
 from helpers.sleeper import sleep_interval
 from payload import payload as user_payload
