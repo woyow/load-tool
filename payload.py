@@ -10,9 +10,7 @@ import time
 import socket
 import requests
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 requests_session = requests.session()
-
 
 def payload(*args, **kwargs):
   print("Global counter:", *args)
