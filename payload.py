@@ -18,12 +18,12 @@ def payload(*args, **kwargs):
   second_example()
 
 def first_example():
-  ip = '84.201.139.248'
+  ip = '142.251.1.101' # google.com
   port = 80
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.connect((ip, port))
   s.sendto(("GET /" + ip + " HTTP/1.1\r\n").encode('ascii'), (ip, port))
-  print("OK!")
+  print("OK! Sent!")
   s.close()
 
 def second_example():
@@ -34,7 +34,7 @@ def second_example():
   }
 
   r = requests_session.get(url, headers = headers, timeout=(1, 1))
-  print(r.content)
+  print("Status code:", r.status_code)
 
 if __name__ == "__main__":
   counter = 1
