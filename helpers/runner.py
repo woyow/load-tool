@@ -3,10 +3,8 @@ from helpers.counter import Counter
 from helpers.sleeper import sleep_interval
 from payload import payload as user_payload
 
-from functools import wraps
 from multiprocessing import Process, Value
 from threading import Thread
-import time
 
 
 class Runner(object):
@@ -25,7 +23,6 @@ class Runner(object):
 
     for i in range(proc_num):
       if self.processes[i] > 0:
-        time.sleep(0.01)
         process = Process(target=self.run_thread, args=(i,))
         try:
           process.start()
