@@ -9,7 +9,7 @@ def main():
   r()
 
 if __name__ == "__main__":
-  parser = argparse.ArgumentParser(prog='main.py')
+  parser = argparse.ArgumentParser(prog='dos.py')
   parser.add_argument('-p', '--process', default=1, help='Set processes count. Default - 1')
   parser.add_argument('-t', '--thread', default=0, help='Set threads count. Default - 0')
   parser.add_argument('-s', '--sleep', default=0, help='Set sleep interval. Default - 0 seconds')
