@@ -1,6 +1,6 @@
 from multiprocessing import Lock as plock
 from threading import Lock as tlock
-from functools import wraps
+
 
 class Locker(object):
 
