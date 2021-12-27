@@ -11,9 +11,8 @@ ENV COUNT=2
 
 COPY requirements.txt /tmp/
 RUN pip3 install --requirement /tmp/requirements.txt
-COPY dos.py .
-COPY payload.py .
+COPY main.py payload.py ./
 COPY /config ./config
 COPY /helpers ./helpers
 
-CMD ["sh", "-c", "./dos.py -p $PROC -t $THREAD -s $SLEEP -c $COUNT"]
+CMD ["sh", "-c", "./main.py -p $PROC -t $THREAD -s $SLEEP -c $COUNT"]
